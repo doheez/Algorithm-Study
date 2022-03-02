@@ -1,5 +1,6 @@
 ## Info
 
+문제 출처 : [BOJ 종이의 개수](https://www.acmicpc.net/problem/1780)
 
 ## ❗ 풀이
 
