@@ -12,7 +12,8 @@
   
 ||날짜|알고리즘|출처|문제1|문제2|문제3|
 |--|--|--|--|--|--|--|
-|**1주차**|03.01. ~ 03.08.|분할 정복|백준|[종이의 개수](https://www.acmicpc.net/problem/1780)|[쿼드트리](https://www.acmicpc.net/problem/1992)||
+|**1주차**|03.01. ~ 03.07.|분할 정복|백준|[종이의 개수](https://www.acmicpc.net/problem/1780)|[쿼드트리](https://www.acmicpc.net/problem/1992)||
+|**2주차**|03.08. ~ 03.14.|DP|백준|[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|[가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)|[오르막 수](https://www.acmicpc.net/problem/11057)|
   
 </details>
 <br>
