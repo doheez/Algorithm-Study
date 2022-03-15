@@ -22,7 +22,7 @@ public class Main {
 
 		for (int i = 2; i <= n; i++) {
 			for(int j = 0; j < 10; j++) {
-				for(int k = 0; k <= ; k++) {
+				for(int k = 0; k <= j; k++) {
 					map[i][j] += (map[i-1][k] % 10007);
 				}
 			}
