@@ -12,14 +12,6 @@ def solution():
                 dp_max = dp[i]
         dp[idx] = dp_max + 1
 
-
-
-
 if __name__ == "__main__":
     solution()
     print(max(dp))
-
-    import timeit
-
-    t1 = timeit.timeit('solution()', setup='from __main__ import solution', number=100000)
-    print(t1)
