@@ -14,7 +14,7 @@
 |--|--|--|--|--|--|--|
 |**1주차**|03.01. ~ 03.07.|분할 정복|백준|[종이의 개수](https://www.acmicpc.net/problem/1780)|[쿼드트리](https://www.acmicpc.net/problem/1992)||
 |**2주차**|03.08. ~ 03.14.|DP|백준|[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|[가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)|[오르막 수](https://www.acmicpc.net/problem/11057)|
-|**3주차**|03.15. ~ 03.21.|DP|백준|[LCS](https://www.acmicpc.net/problem/9251)|[가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002)|[줄 세우기](https://www.acmicpc.net/problem/2631)|
+|**3주차**|03.15. ~ 03.21.|DP|백준|[LCS](https://www.acmicpc.net/problem/9251)|[가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002)|[줄세우기](https://www.acmicpc.net/problem/2631)|
   
 </details>
 <br>
