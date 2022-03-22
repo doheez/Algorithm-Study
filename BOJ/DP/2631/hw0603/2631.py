@@ -1,8 +1,9 @@
-import sys 
+import sys
 
 N = int(sys.stdin.readline())
-arr = list(map(int, sys.stdin.readline().split()))
+arr = [int(sys.stdin.readline().strip()) for _ in range(N)]
 dp = [1] * N
+
 
 def solution():
     for idx in range(1, N):
@@ -12,6 +13,7 @@ def solution():
                 dp_max = dp[i]
         dp[idx] = dp_max + 1
 
+
 if __name__ == "__main__":
     solution()
-    print(max(dp))
+    print(N - max(dp))
