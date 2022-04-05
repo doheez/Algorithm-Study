@@ -1,6 +1,6 @@
 ## Info
 
-<a href="https://www.acmicpc.net/problem/9935" rel="nofollow">2668 숫자고르기</a>
+<a href="https://www.acmicpc.net/problem/2668" rel="nofollow">2668 숫자고르기</a>
 
 ## ❗ 풀이
 
