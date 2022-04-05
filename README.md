@@ -16,8 +16,8 @@
 |**2주차**|03.08. ~ 03.14.|DP|백준|[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|[가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)|[오르막 수](https://www.acmicpc.net/problem/11057)|
 |**3주차**|03.15. ~ 03.21.|DP|백준|[LCS](https://www.acmicpc.net/problem/9251)|[가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002)|[줄세우기](https://www.acmicpc.net/problem/2631)|
 |**4주차**|03.22. ~ 03.28.|DP|백준|[LCS 2](https://www.acmicpc.net/problem/9252)|[평범한 배낭](https://www.acmicpc.net/problem/12865)|[내리막 길](https://www.acmicpc.net/problem/1520)|
-|**5주차**|03.29 ~ 04.04|DFS/BFS|백준|[그림](https://www.acmicpc.net/problem/1926)|[미로 탐색](https://www.acmicpc.net/problem/2178)|[연구소](https://www.acmicpc.net/problem/14502)|
-|**6주차**|04.05 ~ 04.11|DFS/BFS|백준|[아기 상어](https://www.acmicpc.net/problem/16236)|[숫자고르기](https://www.acmicpc.net/problem/2668)|[트리의 지름](https://www.acmicpc.net/problem/1967)|
+|**5주차**|03.29. ~ 04.04.|DFS/BFS|백준|[그림](https://www.acmicpc.net/problem/1926)|[미로 탐색](https://www.acmicpc.net/problem/2178)|[연구소](https://www.acmicpc.net/problem/14502)|
+|**6주차**|04.05. ~ 04.11.|DFS/BFS|백준|[아기 상어](https://www.acmicpc.net/problem/16236)|[숫자고르기](https://www.acmicpc.net/problem/2668)|[트리의 지름](https://www.acmicpc.net/problem/1967)|
   
 </details>
 <br>
