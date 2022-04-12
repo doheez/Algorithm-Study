@@ -7,7 +7,7 @@
 
 ## 📘 문제집
 <details>
-<summary>1주차 ~ 6주차</summary>
+<summary>1주차 ~ 7주차</summary>
 <br>
   
 ||날짜|알고리즘|출처|문제1|문제2|문제3|
@@ -18,6 +18,7 @@
 |**4주차**|03.22. ~ 03.28.|DP|백준|[LCS 2](https://www.acmicpc.net/problem/9252)|[평범한 배낭](https://www.acmicpc.net/problem/12865)|[내리막 길](https://www.acmicpc.net/problem/1520)|
 |**5주차**|03.29. ~ 04.04.|DFS/BFS|백준|[그림](https://www.acmicpc.net/problem/1926)|[미로 탐색](https://www.acmicpc.net/problem/2178)|[연구소](https://www.acmicpc.net/problem/14502)|
 |**6주차**|04.05. ~ 04.11.|DFS/BFS|백준|[아기 상어](https://www.acmicpc.net/problem/16236)|[숫자고르기](https://www.acmicpc.net/problem/2668)|[트리의 지름](https://www.acmicpc.net/problem/1967)|
+|**7주차**|04.12. ~ 04.25.|DFS/BFS|백준|[적록색약](https://www.acmicpc.net/problem/10026)|[인구 이동](https://www.acmicpc.net/problem/16234)|[연구소 3](https://www.acmicpc.net/problem/17142)|
   
 </details>
 <br>
