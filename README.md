@@ -19,6 +19,7 @@
 |**5주차**|03.29. ~ 04.04.|DFS/BFS|백준|[그림](https://www.acmicpc.net/problem/1926)|[미로 탐색](https://www.acmicpc.net/problem/2178)|[연구소](https://www.acmicpc.net/problem/14502)|
 |**6주차**|04.05. ~ 04.11.|DFS/BFS|백준|[아기 상어](https://www.acmicpc.net/problem/16236)|[숫자고르기](https://www.acmicpc.net/problem/2668)|[트리의 지름](https://www.acmicpc.net/problem/1967)|
 |**7주차**|04.12. ~ 04.25.|DFS/BFS|백준|[인구 이동](https://www.acmicpc.net/problem/16234)|[연구소 3](https://www.acmicpc.net/problem/17142)||
+|**8주차**|04.26. ~ 05.02.|DFS/BFS|백준|[적록색약](https://www.acmicpc.net/problem/10026)|[ABCDE](https://www.acmicpc.net/problem/13023)|[빙산](https://www.acmicpc.net/problem/2573)|
   
 </details>
 <br>
