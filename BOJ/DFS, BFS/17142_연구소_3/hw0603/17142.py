@@ -25,7 +25,7 @@ def bfs(q: deque, empty_cnt: int) -> int:
             return time
 
         time += 1
-        for _ in range(length):  # 큐 길이만큼만 반복!
+        for _ in range(length):  # 큐 길이만큼만 반복! 중요!! 부모 노드에서 파생된 애들만 보기 위함
             x, y = q.popleft()
             if (visited[x][y] == -1):
                 visited[x][y] = 1
