@@ -12,7 +12,9 @@ const lab = [];
 const visited = Array.from(Array(N), () => Array(N)); // 방문 및 시간 체크
 const location = []; // 바이러스 위치
 const locationM = []; // M개의 활성 바이러스 위치
-let min = 1000000;
+
+const MIN_INIT = 1000000;
+let min = MIN_INIT;
 let blank = 0;
 
 for (let i = 1; i <= N; i++) {
@@ -52,9 +54,10 @@ const activateVirus = (m, start) => {
     // M개의 바이러스를 활성화시키는 모든 경우의 수
     for (let i = start; i < location.length; i++) {
         locationM.push(location[i]);
-        visited[location[i].row][location[i].col] = 0;
+        visited[location[i].row][location[i].col] = 1;
         activateVirus(m - 1, i + 1);
         locationM.pop();
+        visited[location[i].row][location[i].col] = false;
     }
 };
 
@@ -67,11 +70,17 @@ const spreadVirus = () => {
     // 큐에 활성 바이러스를 먼저 넣어놨으니까
     // 활성 바이러스들로부터 퍼져나가는 시간은 동시에 증가함
 
-    let time = 0; // 확산 시간
     let count = 0; // 바이러스가 퍼진 빈칸 수
 
     const queue = [...locationM];
 
+    // visited를 바로 쓰면 오염되므로 새 visit 배열 만듦
+    const visit = Array.from(Array(N), () => Array(N));
+    for (let i = 0; i < N; i++) {
+        for (let j = 0; j < N; j++) {
+            visit[i][j] = visited[i][j];
+        }
+    }
     while (queue.length > 0) {
         const node = queue.shift();
 
@@ -84,28 +93,40 @@ const spreadVirus = () => {
             }
 
             // 벽이 아니고 방문 안 했으면
-            if (lab[newNode.row][newNode.col] !== WALL && !visited[newNode.row][newNode.col]) {
+            if (lab[newNode.row][newNode.col] !== WALL && visit[newNode.row][newNode.col] === false) {
 
-                // 방문하고 큐에 넣음
-                visited[newNode.row][newNode.col] = visited[node.row][node.col] + 1;
-                queue.push(newNode);
-
-                // 빈칸만 시간 체크
+                // 빈칸만 개수 세기
                 if (lab[newNode.row][newNode.col] === EMPTY) {
-                    time = Math.max(time, visited[newNode.row][newNode.col]);
                     count++;
                 }
+                // 바이러스가 모두 확산되었으면 종료
+                if (count === blank) {
+                    min = Math.min(visit[node.row][node.col], min);
+                    return;
+                }
+                // 방문하고 큐에 넣음
+                visit[newNode.row][newNode.col] = visit[node.row][node.col] + 1;
+                queue.push(newNode);
             }
         }
     }
-
-    // 바이러스가 모두 확산되었으면
-    if (count === blank) {
-        min = Math.min(time, min);
-    } else {
-        min = -1;
-    }
 }
 
-activateVirus(M, 0);
-console.log(min);
+const main = () => {
+    // 빈칸이 처음부터 없으면 곧바로 종료
+    if (blank == 0) {
+        console.log(0)
+        return;
+    }
+    // 바이러스 확산
+    activateVirus(M, 0);
+
+    // min이 초기값과 같으면 바이러스 확산 실패
+    if (min === MIN_INIT) {
+        min = -1;
+    }
+    // 출력
+    console.log(min);
+};
+
+main();
