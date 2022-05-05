@@ -3,13 +3,18 @@
 <a href="https://www.acmicpc.net/problem/1041" rel="nofollow">1041 주사위</a>
 
 ## ❗ 풀이
+![dice](https://user-images.githubusercontent.com/31981462/166978592-542e50a7-3f77-404a-9b6a-a0bcf574e4a4.png)<br>
+위와 같이 탁자 위에 있는 주사위를 생각해 보면, 3개의 면이 보이는 곳과 2개의 면이 보이는 곳, 그리고 1개의 면이 보이는 곳이 있다.  
+각 면의 개수를 세 보면 다음과 같다.
+* 1개의 면: 4(N-2)(N-1) + (N-2)^2 개
+* 2개의 면: 4(N-1) + 4(N-2) 개
+* 3개의 면: 4 개 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+위 식은 `N==1` 일 때는 성립하지 않으므로 별도로 처리해 주어야 하고, `sum(dice) - max(dice)` 로 구할 수 있다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
+다 풀어놓고 계산 실수해서 몇 번이나 틀렸다... 이차식 전개 똑바로 하자..
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
