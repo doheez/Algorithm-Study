@@ -3,13 +3,14 @@
 <a href="https://www.acmicpc.net/problem/1461" rel="nofollow">1461 도서관</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+책들의 원래 위치 정보를 입력받고, 나의 좌표(0) 를 기준으로 +축과 -축을 분리하고, 각 리스트를 거리가 먼 순으로 정렬한다.  
+마지막 책을 옮기고 난 후에 원점으로 돌아올 필요가 없으므로, 가장 거리가 먼 책을 마지막에 옮기고 그 위치에 그대로 있는 것이 가장 거리를 최소화하는 방법이다.  
+`M`개의 책 까지만 한 번에 옮길 수 있으므로 +축 리스트와 -축 리스트에서 `list stride`를 이용해 각각 `M`개 단위로 건너뛴 원소들을 구해 주고, 이를 모두 `walk_cnt` 리스트에 저장해 둔다.  
+  
+`2 * sum(walk_cnt)`를 구하면 모든 책을 옮긴 후 원점으로 돌아왔을 때 거리의 최솟값이 되므로, 여기서 처음에 구해줬던 거리의 최댓값인 `max_dist`를 빼 주면 정답
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+주사위 문제도 그렇고 이 문제도 그렇고 그리디라고는 하는데 왜 이게 그리디 문제인지 잘 와닿지 않는다. 다른 문제 풀면서 감을 익히던가 해야겠다.
