@@ -1,6 +1,6 @@
 ## Info
 
-<a href="https://www.acmicpc.net/problem/9935" rel="nofollow">1041번: 주사위</a>
+<a href="https://www.acmicpc.net/problem/1041" rel="nofollow">1041번: 주사위</a>
 
 ## ❗ 풀이
 정육면체에서 보이는 5개의 면은 다음 주사위들로 구성된다.
