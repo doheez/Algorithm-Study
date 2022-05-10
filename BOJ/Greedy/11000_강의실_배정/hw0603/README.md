@@ -1,15 +1,27 @@
 ## Info
 
-<a href="https://www.acmicpc.net/problem/1461" rel="nofollow">11000 강의실 배정</a>
+<a href="https://www.acmicpc.net/problem/11000" rel="nofollow">11000 강의실 배정</a>
 
 ## ❗ 풀이
+그리디 알고리즘을 이용하여 강의실을 앞에서부터 차곡차곡 배정해 나가야 한다.  
+먼저 시간표를 입력받은 후 강의들을 **시작시간 빠른 순** 으로 정렬한다.  
+정렬된 강의들을 하나씩 순회하면서,  
+- 가장 빨리 강의가 끝나는 강의실의 종료시간보다 `i`번째 강의의 시작시간이 이르다면 새 강의실을 추가해야 한다.
+- 가장 빨리 강의가 끝나는 강의실의 종료시간보다 `i`번째 강의의 시작시간이 늦거나 같다면, 해당 강의실에서 강의를 이어 나갈 수 있다.  
+  
+이 때, 가장 빨리 강의가 끝나는 강의실만 고려해도 되는 이유는 가장 빨리 끝나는 강의실조차도 `i`번째 강의의 시작시간보다 늦다면 그 이후에 끝나는 강의들은 모두 `i`번째 강의의 시작시간보다 늦다는 것이 자명하기 때문.  
+따라서 항상 루프 안에서는 가장 이른 시각에 종료되는 강의의 시간만 조사하면 되므로, `heapq`를 이용하여 매 삽입 시 마다 정렬이 유지되도록 하고 강의실 개설 시에는 강의 종료 시간만 삽입한 뒤 `heapq[0]` 과 `class[i].startTime`의 대소관계를 비교하여 강의실 추가 여부를 결정한다.  
+  
+강의실을 추가해야 할 경우는 단순히 `heapq.heappush(class[i].endTime)`을 하여 강의실들의 리스트인 `heapq`에 해당 강의의 종료시각을 추가해 주고,  
+강의실을 그대로 사용할 수 있을 경우에는 `heapq.heapreplace(class[i].endTime)` 하여 이어서 사용할 수 있는 강의실의 종료 시각 정보를 현재 강의로 업데이트 해 준다.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+파이썬에서는 `heapq` 모듈을 통해 우선순위 큐를 사용할 수 있다. 다만 이는 별도의 자료구조가 아닌 일반적인 `list`에서 우선순위 큐와 같은 방식으로 데이터를 입출력할 수 있도록 도와주는 모듈일 뿐이다.  
+  
+`heapq.heapreplace()` 는 `heapq.heappop()` 수행 후 `heapq.heappush()`를 수행한 것과 동일하고,  
+`heapq.heappushpop()` 는 `heapq.heappush()` 수행 후 `heapq.heappop()`를 수행한 것과 동일하다.
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+그리디 알고리즘을 사용하는 대표적인 문제라서 간단하게 생각했는데, `heapq`모듈을 제대로 써 보는 것이 처음이라 그런지 구현하는 방법이 생각만큼 매끄럽게 떠오르지 않았다.
+자료구조 쓰는게 익숙하지 않다. 연습하자.
