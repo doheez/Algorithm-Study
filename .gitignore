@@ -7,3 +7,6 @@ input.txt
 .project
 /bin/
 .classpath
+.iml
+.xml
+.idea
