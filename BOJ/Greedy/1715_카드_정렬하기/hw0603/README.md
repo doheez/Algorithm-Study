@@ -3,13 +3,11 @@
 <a href="https://www.acmicpc.net/problem/1715" rel="nofollow">1715 카드 정렬하기</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+카드의 비교 횟수는 누적 합으로 계산되므로 각 시행마다 항상 합이 최소가 되는 경우를 택하여 카드 셋을 비교해야 한다. 주의점은 한 번 비교하여 만들어진 새로운 카드 셋도 기존의 카드 셋에 추가하여 대소비교를 같이 해 줘야 한다는 점이다. `heapq`를 사용하여 `pop` 두번 후 생성된 결과를 `push`함과 동시에 `result`에 계속 누적해 두면 쉽게 구할 수 있다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+`heapq.heapify()`는 `sorted()`와 같이 원본 데이터 자체를 수정하므로 None을 리턴한다.  
+`my_list = heapq.heapify([$LIST_COMPREHENSION])` 과 같이 쓸 수 없음에 유의.
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+골5였던 "1092 배"에서 애를 좀 먹었던지라 골4라서 좀 쫄았는데 생각보다 금방 풀렸다!
