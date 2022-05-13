@@ -3,18 +3,19 @@ import sys
 N = int(sys.stdin.readline())
 word_list = sorted([list(sys.stdin.readline().strip()) for _ in range(N)], key=lambda x: len(x), reverse=True)
 ch2num = {chr(65+i): None for i in range(26)}
+weight = {chr(65+i): 0 for i in range(26)}
 
-# 매핑할 문자 순서 구함
-num = '9'
-for i in range(8, 0, -1):  # 수의 길이는 최대 8.
-    for word in word_list:  # 모든 단어들을 순회
-        if (len(word) - i >= 0):  # 길이가 긴 숫자의 앞자리부터 data에 추가
-            current_ch = word[-i]
-            if not (ch2num[current_ch]):  # 매핑되지 않은 데이터가 들어오면
-                ch2num[current_ch] = num  # 매핑 데이터 추가
-                num = str(int(num)-1)
-            word[-i] = ch2num[current_ch]  # 문자 매핑
+# 각 문자별로 가중치 구함
+for word in word_list:
+    for i in range(len(word)):
+        weight[word[i]] += 10 ** (len(word)-i-1)
 
-print(ch2num, word_list, sep='\n')
+# 가중치가 높은 순서대로 매핑 테이블 구축
+num = 9
+for w in sorted(weight.items(), key=lambda x: x[1], reverse=True):
+    if (w[1]):
+        ch2num[w[0]] = str(num)
+        num -= 1
 
-print(sum(map(lambda l: int("".join(l)), word_list)))
+# 문자열 매핑 후 합 계산
+print(sum([int("".join(list(map(lambda ch: ch2num[ch], word)))) for word in word_list]))

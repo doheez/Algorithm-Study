@@ -1,15 +1,15 @@
 ## Info
-
 <a href="https://www.acmicpc.net/problem/1339" rel="nofollow">1339 단어 수학</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+먼저 각 문자열(식)들을 순회하면서 길이를 참조하여 문자열을 구성하는 각 문자에 곱해지는 가중치의 합을 구한다.  
+ex) ABCD + CDEF라면 A의 가중치는 1000, B는 100, C는 1010, D는 101, E/F는 1이 된다.  
+다음으로 가중치가 높은 문자부터 (9~0)의 숫자 중 큰 수를 할당하여 매핑 테이블을 구축한다.  
+매핑 테이블 구축이 완료되면 원본 문자열들을 실제로 매핑하고 합을 구하면 정답.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+처음에는 단순하게 길이가 긴 순으로 문자열들을 정렬한 다음 앞에서부터 9..8..7 순으로 매핑을 하면 된다고 생각했는데, `["AB", "BB"]` 와 같이 길이가 같지만 B가 최종 합에서 더 많은 비중을 차지하는 경우나 `["ABB", "BB", "BB", ..., "BB"]`와 같이 길이가 더 긴 문자열보다 길이가 짧은 문자열들의 합이 비중이 더 커지는 경우를 커버하지 못했다.  
+그리디 문제는 '가장 최적인 조건이 무엇인가?'를 생각하는 것이 포인트임을 알고 있음에도 항상 그걸 생각해 내는게 어려운 것 같다. DP 점화식 떠올리기가 어려운 것 처럼.
