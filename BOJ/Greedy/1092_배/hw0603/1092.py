@@ -1,36 +1,24 @@
-from bisect import bisect_left, bisect_right
 import sys
 
+# 데이터 입력받으면서 내림차순 정렬
 N = int(sys.stdin.readline())
-crane = sorted(list(map(int, sys.stdin.readline().split())))
+crane = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
 M = int(sys.stdin.readline())
-box = sorted(list(map(int, sys.stdin.readline().split())))
+box = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
 
-min_crane, max_crane = crane[0], crane[-1]
-min_box, max_box = box[0], box[-1]
-
-crane = crane[bisect_left(crane, min_box):]  # 박스의 최소 무게보다 허용중량이 큰 크레인만 남김
-cranecpy = crane[:]
 
 # 박스를 모두 옮길 수 없는 경우 -1 출력
-if (not crane or max_box > max_crane):
+if (box[0] > crane[0]):
     print(-1)
 # 박스를 모두 옮길 수 있는 경우
 else:
-    limitidx = {c: bisect_right(box, c)-1 for c in crane}
-    days = 1
-    print(f"{limitidx=}")
-    print(f"{box=}")
-    print(f"{crane=}")
-
-    for i in range(len(box)):
-        if not (crane):
-            crane = cranecpy[:]
-            days += 1
-        while (crane):
-            minavailcrane = crane.pop(0)
-            if (i <= limitidx[minavailcrane]):
-                break
-        print(f"박스 {box[i]} 에는 크레인 {minavailcrane} 할당. 남은 크레인은 {crane}")
-
-    print(days)
+    time = 0
+    while (box):
+        # 루프 돌면서 박스를 옮길 수 있는 크레인을 찾고, 찾으면 time += 1
+        for i in range(N):
+            for j in range(len(box)):  # box 리스트의 길이가 계속 변하므로 루프 돌 때 마다 업데이트
+                if (crane[i] >= box[j]):  # 이번 크레인으로 박스를 들 수 있으면
+                    del box[j]  # box 삭제
+                    break
+        time += 1
+    print(time)
