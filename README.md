@@ -21,6 +21,7 @@
 |**7주차**|04.12. ~ 04.25.|DFS/BFS|백준|[인구 이동](https://www.acmicpc.net/problem/16234)|[연구소 3](https://www.acmicpc.net/problem/17142)||
 |**8주차**|04.26. ~ 05.02.|DFS/BFS|백준|[적록색약](https://www.acmicpc.net/problem/10026)|[ABCDE](https://www.acmicpc.net/problem/13023)|[빙산](https://www.acmicpc.net/problem/2573)|
 |**9주차**|05.03. ~ 05.09.|그리디|백준|[주사위](https://www.acmicpc.net/problem/1041)|[도서관](https://www.acmicpc.net/problem/1461)|[강의실 배정](https://www.acmicpc.net/problem/11000)|
+|**10주차**|05.10. ~ 05.16.|그리디|백준|[배](https://www.acmicpc.net/problem/1092)|[단어 수학](https://www.acmicpc.net/problem/1339)|[카드 정렬하기](https://www.acmicpc.net/problem/1715)|
   
 </details>
 <br>
