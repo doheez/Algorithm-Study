@@ -1,14 +1,15 @@
 ## Info
-<a href="https://www.acmicpc.net/problem/2437" rel="nofollow">2437 컵라면</a>
+<a href="https://www.acmicpc.net/problem/2437" rel="nofollow">2437 저울</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+무게추들을 무게 순으로 정렬하고, 인덱스 순서대로 하나씩 추가한다.  
+각 추가 추가될 때 마다 현재까지 추가된 추들로 측정할 수 있는 연속적인 무게의 범위를 `cur_min`과 `cur_max`에 저장해 둔다.  
+이 때, 현재 시행에서 추가된 추로 인해 확장되는 측정 가능한 무게의 범위는 `new_chu` ~ `new_chu + cur+max`가 될 것이다.  
+  
+무게의 범위가 연속적이여야 하므로 `cur_max+1` 보다 `new_chu`가 작거나 같은지 검증하고, 조건에 맞지 않는다면 그 상태에서의 `cur_max+1`이 정답이 된다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+조건 자체는 간단하게 보였는데 생각하는데 꽤 많은 시간이 걸렸다. 그래도 골드3문제 한번데 풀어서 뿌듯~
