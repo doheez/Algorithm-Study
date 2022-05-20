@@ -2,13 +2,39 @@
 <a href="https://www.acmicpc.net/problem/1781" rel="nofollow">1781 컵라면</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+입력받은 문제 데이터를 데드라인 빠른 순으로 정렬한 후, 데드라인이 빠른 문제부터 해당 문제를 풀었을 때 받을 수 있는 컵라면의 수를 `heapq`에 `push` 한다.  
+  
+현재 문제의 데드라인보다 현재의 `len(heapq)`가 크다면 데드라인을 초과한 것이므로 지금까지 취한 문제에 대한 보상 중 하나를 포기해야 할 것이다. 이때 `heapq.pop()`을 이용하여 보상의 최솟값을 큐에서 제거해 주면 된다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+결론적으로 이 문제 풀이에 사용하지는 않았지만 최초 아이디어를 구현하면서 새롭게 알게 된 것들이 많다.  
+  
+`dict`에서 `dict[key]`와 같이 참조하면 `key`가 없을 때 `KeyError` 예외가 발생하지만, `dict.get(key)` 메소드를 통해 원소를 가져오면 `key`가 없을 때 `None`을 리턴해 준다. 두 번째 인자를 전달하여 키를 찾지 못했을 때 리턴할 값을 명시적으로 선언할 수도 있다.  
+  
+`heapq.heapify()`의 경우 `sort()`류의 함수와 달리 정렬의 기준이 되는 `key`를 람다식 형태로 받지 않는다. `heapq`에서 커스텀 정렬이 필요한 경우, 클래스를 하나 선언하고 대소비교에 사용되는 기본 메소드인 `ClassName.__lt__()`를 오버라이드하여 구현할 수 있다.
 
 ## 🙂 마무리
+처음에는 deadline이 가까운 순으로, deadline이 같으면 reward가 큰 순으로 정렬하여 문제를 푸는 방식으로 접근했었는데
+```
+3
+1 1 
+2 50
+2 100
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+ans: 150; fail: 51
+```
+위와 같이 데드라인이 가깝지 않은 숙제를 먼저 해야 하는 경우가 있어 반례가 생겼다.  
+그래서 반대로 reward가 큰 것들을 먼저 수행하고, reward가 같은 경우는 deadline 가까운 순으로 수행했더니
+```
+3
+1 100
+2 200
+3 300
+
+ans: 600; fail: 500
+```
+위 예시처럼 충분히 모든 숙제를 할 수 있음에도 deadline이 임박한 것이 먼저 선택되지 못해 최적해가 도출되지 않는 경우가 생겼다.  
+  
+결국 풀이를 참고해서 풀었는데, 알고 보니 어떤 순서로 문제를 풀 것인지를 구하는 것이 초점이 아니라 최종적으로 받는 보상이 중요한 것이므로 굳이 반복문을 돌면서 문제를 푸는 순서대로 `total_reward += cur_reward`하는 방식으로 구현할 필요가 없었다.  
+  
+풀이를 보니 어려운 풀이는 아니였지만 아직까지 혼자서 생각할 수 있는 풀이는 아니였던 것 같다. 갈 길이 멀구나~
