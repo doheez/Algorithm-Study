@@ -35,7 +35,7 @@
 ||날짜|알고리즘|출처|문제1|문제2|문제3|
 |--|--|--|--|--|--|--|
 |**11주차**|05.17. ~ 05.23.|그리디|백준|[저울](https://www.acmicpc.net/problem/2437)|[컵라면](https://www.acmicpc.net/problem/1781)|[공항](https://www.acmicpc.net/problem/10775)|
-|**12주차**|05.24. ~ 05.30.|그리디|백준|[최단경로](https://www.acmicpc.net/problem/1753)|[최소비용 구하기](https://www.acmicpc.net/problem/1916)|[녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)|
+|**12주차**|05.24. ~ 05.30.|다익스트라|백준|[최단경로](https://www.acmicpc.net/problem/1753)|[최소비용 구하기](https://www.acmicpc.net/problem/1916)|[녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)|
 
 </details>
 <br>
