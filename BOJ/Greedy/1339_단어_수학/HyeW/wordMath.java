@@ -39,7 +39,6 @@ public class wordMath {
         int i = 9;
         while(!arrsum.isEmpty()) {
             int value = arrsum.poll();
-            System.out.println(value);
             ans += value*i;
             i--;
         }
