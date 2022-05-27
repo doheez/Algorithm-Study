@@ -1,15 +1,15 @@
 ## Info
-
 <a href="https://www.acmicpc.net/problem/4485" rel="nofollow">4485 녹색 옷 입은 애가 젤다지?</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+각 Problem 마다 다익스트라를 적용해 주면 된다. 다만 다른 문제와 다른 점은 노드와 간선 형태가 아닌 2차원 배열 형태의 그래프를 탐색해야 한다는 점. 앞서 풀었던 1753 최단경로, 1916 최소비용 구하기 문제와 다르게 그래프를 인접리스트 형태로 구현하기보다 BFS 탐색에서 사용하던 4방향 탐색을 적용하면 2차원 배열에서 현재 노드의 인접 노드들을 바로 탐색할 수 있다. 
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+다익스트라 문제가 어떻게 다른 형태로 출제될 수 있을까 궁금했었는데, 그래프 형태가 조금 바뀌자 마자 풀이법이 헷갈렸다. 알고리즘과 그 알고리즘을 구현한 코드의 틀을 어느 정도 암기하는 것도 중요하지만 항상 기본은 원리를 정확히 알고 변형문제에 잘 적용할 수 있도록 하는 것.  
+  
+다른 사람들은 어떻게 구현했나 찾아보니 BFS완전탐색과 다익스트라 풀이 두 가지가 있었다. 나도 알고리즘 분류 없이 문제만 봤으면 그냥 BFS로 풀었을 것 같기도 하고.  
+  
+사람들의 다익스트라 풀이를 보니, pq의 초깃값인 (시작노드 비용, 시작노드 좌표)를 설정할 때 시작노드의 비용을 `graph[0][0]`이 아닌 그냥 `0`으로 설정해 두던데 특별한 이유가 있는 것인가..?
