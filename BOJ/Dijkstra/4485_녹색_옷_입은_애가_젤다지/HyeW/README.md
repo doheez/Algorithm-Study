@@ -4,12 +4,15 @@
 
 ## ❗ 풀이
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+이차원배열이 주어지니 인접리스트로 만들 필요가 없다.<br/>
+사방탐색과 다익스트라를 함께 사용하여 문제를 해결했다.
 
 ## ❗ 추가 지식
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+없음
 
 ## 🙂 마무리
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+처음에 앞서 풀었던 2문제와 다르게 input값이 주어져 당황했지만
+인접리스트를 안만들어도 되니 더 쉽게 풀 수 있었던 문제였다. <br/>
+그리고 백준 퍼센트가 그냥 바로 쑥 올라가는게 테케가 별로 없는거였는지 아닌지 의심된다.<br/>
