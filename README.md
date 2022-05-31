@@ -23,19 +23,17 @@
 |**9주차**|05.03. ~ 05.09.|그리디|백준|[주사위](https://www.acmicpc.net/problem/1041)|[도서관](https://www.acmicpc.net/problem/1461)|[강의실 배정](https://www.acmicpc.net/problem/11000)|
 |**10주차**|05.10. ~ 05.16.|그리디|백준|[배](https://www.acmicpc.net/problem/1092)|[단어 수학](https://www.acmicpc.net/problem/1339)|[카드 정렬하기](https://www.acmicpc.net/problem/1715)|
 
-  
-  
 </details>
-<br>
-
 
 <details>
 <summary>11주차 ~ 20주차</summary>
+<br>
   
 ||날짜|알고리즘|출처|문제1|문제2|문제3|
 |--|--|--|--|--|--|--|
 |**11주차**|05.17. ~ 05.23.|그리디|백준|[저울](https://www.acmicpc.net/problem/2437)|[컵라면](https://www.acmicpc.net/problem/1781)|[공항](https://www.acmicpc.net/problem/10775)|
 |**12주차**|05.24. ~ 05.30.|다익스트라|백준|[최단경로](https://www.acmicpc.net/problem/1753)|[최소비용 구하기](https://www.acmicpc.net/problem/1916)|[녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)|
+|**13주차**|05.31. ~ 06.06.|최소 스패닝 트리|백준|[최소 스패닝 트리](https://www.acmicpc.net/problem/1197)|[네트워크 연결](https://www.acmicpc.net/problem/1922)|[도시 분할 계획](https://www.acmicpc.net/problem/1647)|
 
 </details>
 <br>
