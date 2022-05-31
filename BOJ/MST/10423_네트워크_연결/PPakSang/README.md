@@ -1,6 +1,6 @@
 ## Info
 
-<a href="https://www.acmicpc.net/problem/10423" rel="nofollow">10423 네트워크 연결</a>
+<a href="https://www.acmicpc.net/problem/1922" rel="nofollow">1922 네트워크 연결</a>
 
 ## ❗ 풀이
 
