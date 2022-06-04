@@ -56,7 +56,7 @@ public class Main {
             visited[edge.index] = true;
 
             // MST 완성 여부 검사
-            if (cnt++ == V - 1) {
+            if (++cnt == V) {
                 break;
             }
 
