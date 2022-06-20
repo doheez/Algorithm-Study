@@ -40,7 +40,7 @@ public class Main {
             }
         }
 
-        int result = prim();
+        int result = kruskal();
         System.out.println(result);
         br.close();
     }

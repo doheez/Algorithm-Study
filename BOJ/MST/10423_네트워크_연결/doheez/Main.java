@@ -30,7 +30,7 @@ public class Main {
             graph[b].add(new Node(a, weight));
         }
 
-        int result = prim();
+        int result = kruskal();
         System.out.println(result);
         br.close();
     }
