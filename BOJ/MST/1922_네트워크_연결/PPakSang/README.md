@@ -1,6 +1,6 @@
 ## Info
 
-<a href="https://www.acmicpc.net/problem/1647" rel="nofollow">1647 도시 분할 계획</a>
+<a href="https://www.acmicpc.net/problem/1922" rel="nofollow">1922 네트워크 연결</a>
 
 ## ❗ 풀이
 
@@ -10,8 +10,8 @@
 
 노드를 방문하고, 노드에 방문했을 때 갈 수 있는 노드 중, 방문하지 않은 노드를 pq에 다시 넣는다
 
-쭉죽 방문하다가 방문할 수 있는 노드가 더 이상 없으면(n == nodeNum) 종료한다
-
+쭉죽 방문하다가 방문할 수 있는 노드가 더 이상 없으면(n == nodeNum) 종료한다  
+  
 
 ## ❗ 추가 지식
 
