@@ -4,12 +4,16 @@
 
 ## ❗ 풀이
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+시험이라 시간이 없어 쉬운 프림으로 풀었다
+
+프림 알고리즘은 다익스트라와 같이 매 노드 별 갈 수 있는 경로 중 가장 최소가 되는  
+
+노드를 방문하고, 노드에 방문했을 때 갈 수 있는 노드 중, 방문하지 않은 노드를 pq에 다시 넣는다
+  
+쭉죽 방문하다가 방문할 수 있는 노드가 더 이상 없으면(n == nodeNum) 종료한다 
 
 ## ❗ 추가 지식
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
 
 ## 🙂 마무리
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
