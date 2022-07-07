@@ -1,32 +1,47 @@
 from collections import deque
-from dis import dis
 import sys
 
+sys.setrecursionlimit(10 ** 8)
 dr = [1, -1, 0, 0]
 dc = [0, 0, 1, -1]
 
 N = int(sys.stdin.readline())
 graph = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+visited = [[False] * N for _ in range(N)]
 
 
-# BFS로 각 섬을 다른 번호로 마킹하는 함수
-def markisland(i, j):
-    q = deque([(i, j)])
+# # BFS로 각 섬을 다른 번호로 마킹하는 함수
+# def markisland(i, j):
+#     q = deque([(i, j)])
+#     visited[i][j] = True
 
-    while (q):
-        row, col = q.popleft()
+#     while (q):
+#         row, col = q.popleft()
 
-        graph[row][col] = markisland.marknum
+#         graph[row][col] = markisland.marknum
 
-        for d in range(4):
-            n_row = row + dr[d]
-            n_col = col + dc[d]
+#         for d in range(4):
+#             n_row = row + dr[d]
+#             n_col = col + dc[d]
 
-            if (0 <= n_row < N and 0 <= n_col < N):  # 그래프 범위 안에 있고
-                if (graph[n_row][n_col] == 1):  # 아직 마킹되지 않은 경우
-                    q.append((n_row, n_col))
+#             if (0 <= n_row < N and 0 <= n_col < N):  # 그래프 범위 안에 있고
+#                 if (graph[n_row][n_col] == 1):  # 아직 마킹되지 않은 경우
+#                     q.append((n_row, n_col))
+#                     visited[n_row][n_col] = True
 
-    markisland.marknum += 1
+#     markisland.marknum += 1
+
+# 각 섬에 번호를 붙여줘서 그룹핑하는 함수
+def markisland(row, col):
+    visited[row][col] = True
+    graph[row][col] = markisland.marknum
+
+    for i in range(4):
+        n_row, n_col = row + dr[i], col + dc[i]
+        if (n_row < 0 or n_row >= N or n_col < 0 or n_col >= N):
+            continue
+        if (not visited[n_row][n_col] and graph[n_row][n_col]):
+            markisland(n_row, n_col)
 
 
 # 바다를 건너며 섬간 최단거리 구함
@@ -54,9 +69,6 @@ def bfs(z):
             # 갈 수 없는 곳이면 continue
             if (n_row < 0 or n_row >= N or n_col < 0 or n_col >= N):
                 continue
-            # 이미 방문한 곳(=dist배열 값이 초깃값이 아닌 곳)이면 continue
-            if (dist[n_row][n_col] != -1):
-                continue
             # 다른 섬을 만나면 기존 답과 비교하여 짧은 거리 선택
             if (graph[n_row][n_col] > 0 and graph[n_row][n_col] != z):
                 answer = min(answer, dist[row][col])
@@ -71,8 +83,9 @@ def bfs(z):
 markisland.marknum = 2  # 1은 이미 육지 칸의 초깃값이므로 2부터 마킹
 for i in range(N):
     for j in range(N):
-        if (graph[i][j] == 1):  # 아직 마킹되지 않은 경우
+        if (graph[i][j] == 1 and not visited[i][j]):  # 아직 마킹되지 않은 경우
             markisland(i, j)  # 해당 좌표를 포함하는 섬을 마킹
+            markisland.marknum += 1
 
 # 각 좌표를 BFS탐색하며 나와 다른 섬으로 이동하기까지 건너야 하는 바다 칸의 개수(=다리의 길이) 구함
 answer = sys.maxsize
@@ -80,5 +93,5 @@ for i in range(2, markisland.marknum):
     bfs(i)
 
 
-print(*graph, sep="\n")
+# print(*graph, sep="\n")
 print(answer)
