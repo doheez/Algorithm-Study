@@ -2,13 +2,15 @@
 <a href="https://www.acmicpc.net/problem/11559" rel="nofollow">11559 Puyo Puyo</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+먼저 그래프를 전체 탐색하며 뿌요가 있는 칸에 한해서 그 좌표를 `bfs(i, j)` 함수로 전달해 준다.  
+`bfs()`함수는 해당 좌표에 있는 뿌요를 기준으로 잡고, BFS 탐색을 진행하면서 기준 뿌요를 포함한 연쇄 반응을 일으키고(반응에 참여한 뿌요들을 모두 빈 칸으로 만듦), 반응이 가능하다면 `True`를, 불가능하다면 `False`를 반환한다.  
+  
+그래프 전체를 한 번 탐색할 때 마다 그 탐색에서 연쇄반응이 한 번 이상 발생했는지 여부를 저장해 두고, 일어나지 않았다면 더 이상 연쇄반응이 일어날 수 없다는 의미이므로 정답 출력 후 종료한다.  
+연쇄반응이 발생했다면 다음 연쇄반응을 일으킬 수 있는 가능성이 있으므로 `organize()` 함수를 호출하여 중력 효과를 적용하고, 다시 전체 탐색 후 뿌요가 있는 칸에서 BFS를 적용하는 것을 반복한다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+큰 로직들은 전부 내가 생각했던 것이 맞았는데, 중력 효과(빈 칸 위에 있는 뿌요들을 아래로 내리는 것)를 대체 어떻게 구현해야 하나 생각이 나지 않아서 솔루션을 참고했...지만 결국에는 그냥 전체 탐색하면서 큐에 넣은 다음에 바닥에서부터 큐를 `pop()` 하면서 그래프에 다시 넣어주는 게 정답이였다-_-;  
+물론 나는 인덱스로만 접근해서 구현하려고 하긴 했었지만 의외로 단순무식한 방법이라서 놀랐다. 좀 더 생각해볼걸!
