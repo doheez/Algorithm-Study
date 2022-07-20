@@ -2,13 +2,16 @@
 <a href="https://www.acmicpc.net/problem/17471" rel="nofollow">17471 게리멘더링</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+N이 최대 10 이므로 최솟값을 구할 때는 그냥 브루트포스를 이용하여 구현한다.  
+선거구가 총 두 개 뿐이므로, `선거구 1` 에 m개의 구역을 할당한 후, `선거구 2`에 N-m개의 구역을 할당하는 경우와, `선거구 2`에 m, `선거구 1`에 N-m개의 구역을 할당하는 경우는 동일하다고 할 수 있다.  
+  
+따라서, `선거구 1`에 m(0 < m <= N//2)개의 구역을 할당하는 경우들만을 조합을 이용하여 구하면 중복된 계산을 피할 수 있다.  
+  
+모든 경우에 대해 BFS를 이용하여 각 선거구 내의 연결 여부를 파악하고, 두 선거구가 모두 조건에 맞는(유효한) 선거구인지 검증한다.  
+1과 2 모두 유효한 선거구라면 각 선거구 간의 인구 차이를 구하고, 가능한 차이값 중 최솟값을 출력하면 정답
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+브루트포스를 활용하는 것 까지는 생각해 냈는데 그 뒤에 구현할 때 어려움이 좀 있었다. 조합 자체는 파이썬 조합 모듈 사용하니까 간단하게 끝났다.
