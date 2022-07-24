@@ -2,13 +2,13 @@
 <a href="https://www.acmicpc.net/problem/5014" rel="nofollow">5014 스타트링크</a>
 
 ## ❗ 풀이
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+건물의 각 층을 노드로 보고 BFS 탐색을 진행하여 풀이한다.  
+큐에는 `(현재 강호가 위치한 층, 현재 상태로 도달하기까지 강호가 누른 버튼 수)`를 원소로 저장하고, 큐에서 하나씩 꺼내면서 꺼낸 원소가 목적지 층인 `G`와 동일하다면 이때까지 누른 버튼 수를 출력 후 `break`하고, 아니라면 건물 층수의 범위 내에서 `U`버튼을 눌렀을 떄와 `D`버튼을 눌렀을 때의 경우 두 가지를 모두 큐에 추가해 준다. 만약 `break`되지 않고 큐가 비어서 루프문을 탈출했다면 이 엘리베이터로는 `S`층에서 `G`층으로 도달할 수 있는 방법이 없으므로 `use the stairs`를 출력해야 한다.  
+  
+BFS에서 노드간의 중복 방문을 막기 위하여 `visited` 검증을 해 줘야 하는데, 층수가 최대 `1000000`층까지 입력될 수 있으므로 배열보다는 딕셔너리를 활용하여 체크해 주었다.
 
 ## ❗ 추가 지식
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+None
 
 ## 🙂 마무리
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dui, sodales vitae risus eu, consectetur sodales ipsum. Etiam eget ligula quis elit molestie efficitur. Ut lorem turpis, hendrerit et venenatis ac, consequat non sapien.
+2%에서 시간초과가 계속 떠서 어떻게 해야 하나 한참 고민했었는데 알고 보니 `visited` 처리 자체를 안 해 줬던 것이 화근이였다. 일반적인 이차원 배열을 탐색하는 문제였다면 당연히 습관적으로 추가해 줬었을 것 같은데 처음에 BFS라고 생각을 못 하고 풀어서인지 깜빡했다. 중복 방문 처리 꼭 잘 해 주자!
