@@ -39,7 +39,7 @@
 |**16주차**|06.29. ~ 07.05.|DP|백준|[파이프 옮기기 1](https://www.acmicpc.net/problem/17070)|[1학년](https://www.acmicpc.net/problem/5557)|[이모티콘](https://www.acmicpc.net/problem/14226)|
 |**17주차**|07.06. ~ 07.12.|DFS/BFS|백준|[이분 그래프](https://www.acmicpc.net/problem/1707)|[텀 프로젝트](https://www.acmicpc.net/problem/9466)|[다리 만들기](https://www.acmicpc.net/problem/2146)|
 |**18주차**|07.13 ~ 07.19|DFS/BFS|백준|[스타트링크](https://www.acmicpc.net/problem/5014)|[Puyo Puyo](https://www.acmicpc.net/problem/11559)|[게리맨더링](https://www.acmicpc.net/problem/17471)|
-|**19주차**|07.20 ~ 07.26|시뮬레이션|백준|[톱니바퀴](https://www.acmicpc.net/problem/14891)|[로봇 청소기](https://www.acmicpc.net/problem/14503)|[게리맨더링2](https://www.acmicpc.net/problem/17779)|
+|**19주차**|07.20 ~ 07.26|시뮬레이션|백준|[톱니바퀴](https://www.acmicpc.net/problem/14891)|[로봇 청소기](https://www.acmicpc.net/problem/14503)|[게리맨더링 2](https://www.acmicpc.net/problem/17779)|
 </details>
 <br>
 
