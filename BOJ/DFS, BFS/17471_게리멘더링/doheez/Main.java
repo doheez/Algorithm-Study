@@ -1,9 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-/**
- * 시간 초과
- */
 public class Main {
     int N;
     int[] people;
@@ -45,7 +42,7 @@ public class Main {
             }
         }
         // 풀이
-        combination(0);
+        combination(1, 0);
 
         // 출력
         if (min == Integer.MAX_VALUE) {
@@ -56,7 +53,7 @@ public class Main {
         br.close();
     }
 
-    public void combination(int cnt) {
+    public void combination(int start, int cnt) {
         if (cnt > 0) {
             // 선거구 나누기
             for (int i = 1; i <= N; i++) {
@@ -66,13 +63,12 @@ public class Main {
                     group2.add(i);
                 }
             }
-
             // 게리맨더링
             gerrymandering();
 
             // 선거구 초기화
-            group1.clear();
-            group2.clear();
+            group1 = new ArrayList<>();
+            group2 = new ArrayList<>();
         }
 
         // N개 중 x개를 고른 것과 (N-x)개를 고른 것은 같으니까 중복 제거
@@ -81,13 +77,13 @@ public class Main {
         }
 
         // 조합
-        for (int i = 1; i <= N; i++) {
+        for (int i = start; i <= N; i++) {
             if (visited[i]) {
                 continue;
             }
 
             visited[i] = true;
-            combination(cnt + 1);
+            combination(i + 1, cnt + 1);
             visited[i] = false;
         }
     }
